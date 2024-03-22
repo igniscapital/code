@@ -158,6 +158,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__mV4Wc
                 )}
                 component={Link}
+                href={"https://t.me/CodecheckT"}
                 platform={"nextjs"}
               >
                 {"Telegram"}
@@ -170,6 +171,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__uso0Q
                 )}
                 component={Link}
+                href={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "https://dexscreener.com/solana/6rMh3N1AxLnwGbF54wL2hDaYan6M1uMhvkBpZUnnYk3K"
+                    : undefined
+                }
                 platform={"nextjs"}
               >
                 {"Chart"}
@@ -182,6 +188,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link__vMjte
                 )}
                 component={Link}
+                href={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "https://twitter.com/CodeSOL"
+                    : "https://twitter.com/CodeSOL"
+                }
                 platform={"nextjs"}
               >
                 {"Twitter"}
@@ -367,7 +378,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Connect to Raydium. Go to Raydium in google chrome or on the browser inside your Phantom app. Connect your wallet. Paste the $BODEN token address into Raydium, select $BODEN, and confirm. When Phantom prompts you for a wallet signature, sign."
+                    "Connect to Raydium. Go to Raydium in google chrome or on the browser inside your Phantom app. Connect your wallet. Paste the $BODEN token address into Raydium, select $CODE, and confirm. When Phantom prompts you for a wallet signature, sign."
                   }
                 </div>
               </Stack__>
@@ -394,7 +405,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Switch SOL for $BODEN. We have Zero taxes so you don\u2019t need to worry about buying with a specific slippage, although you may"
+                    "Switch SOL for $CODE. We have Zero taxes so you don\u2019t need to worry about buying with a specific slippage, although you may"
                   }
                 </div>
               </Stack__>
