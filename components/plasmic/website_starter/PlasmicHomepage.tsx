@@ -59,6 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { PlasmicHead } from "@plasmicapp/react-web";
+
 import { useScreenVariants as useScreenVariantsiDyahyDIyAVg } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: IDyahyDIyAVg/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -79,6 +81,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  pageMetadataOverride?: Flex__<typeof PlasmicHead>;
   h6?: Flex__<"h6">;
 };
 
@@ -121,7 +124,20 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -144,6 +160,17 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <PlasmicHead
+            data-plasmic-name={"pageMetadataOverride"}
+            data-plasmic-override={overrides.pageMetadataOverride}
+            className={classNames("__wab_instance", sty.pageMetadataOverride)}
+            description={
+              "Welcome to $CODE, the heart of high-stakes crypto on Solana. We're the bold spirits of the crypto world, chasing massive rewards through daring trades. $CODE is more than a meme token; it's a revolution in adventurous trading, powered by community and Solana's speed."
+            }
+            image={"/plasmic/website_starter/images/codelogoMinjpg.jpg"}
+            title={"Community of Degen"}
+          />
+
           <div className={classNames(projectcss.all, sty.freeBox__yXv7G)}>
             <Stack__
               as={"div"}
@@ -418,7 +445,8 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h6"],
+  root: ["root", "pageMetadataOverride", "h6"],
+  pageMetadataOverride: ["pageMetadataOverride"],
   h6: ["h6"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -426,6 +454,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  pageMetadataOverride: typeof PlasmicHead;
   h6: "h6";
 };
 
@@ -489,6 +518,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
     h6: makeNodeComponent("h6"),
 
     // Metadata about props expected for PlasmicHomepage
@@ -497,7 +527,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "Community Of Degen",
       description: "",
       ogImageSrc: "",
       canonical: ""
