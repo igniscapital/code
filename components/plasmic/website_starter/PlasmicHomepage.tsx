@@ -405,7 +405,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Connect to Raydium. Go to Raydium in google chrome or on the browser inside your Phantom app. Connect your wallet. Paste the $BODEN token address into Raydium, select $CODE, and confirm. When Phantom prompts you for a wallet signature, sign."
+                    "Connect to Raydium. Go to Raydium in google chrome or on the browser inside your Phantom app. Connect your wallet. Paste the $CODE token address into Raydium, select $CODE, and confirm. When Phantom prompts you for a wallet signature, sign."
                   }
                 </div>
               </Stack__>
