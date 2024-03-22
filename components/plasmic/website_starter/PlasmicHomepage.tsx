@@ -200,7 +200,7 @@ function PlasmicHomepage__RenderFunc(props: {
               displayWidth={"auto"}
               loading={"lazy"}
               src={{
-                src: "/plasmic/website_starter/images/photo20240322151429Jpg.jpg",
+                src: "/plasmic/website_starter/images/codelogoMinjpg.jpg",
                 fullWidth: 4000,
                 fullHeight: 4000,
                 aspectRatio: undefined

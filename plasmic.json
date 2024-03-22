@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -54,6 +54,11 @@
           "id": "TxNmykersQkn",
           "name": "code1.jpg",
           "filePath": "../public/plasmic/website_starter/images/code1Jpg.jpg"
+        },
+        {
+          "id": "YsNIDhD6XIjd",
+          "name": "codelogo-min.jpg",
+          "filePath": "../public/plasmic/website_starter/images/codelogoMinjpg.jpg"
         }
       ],
       "indirect": false,
