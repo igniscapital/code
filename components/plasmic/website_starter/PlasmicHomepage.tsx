@@ -215,7 +215,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.text__keaUe
                 )}
               >
-                {"CA: 55bE8QkrnTEKou5kB4fGBRt9TmKtb9R6z2P5iqa54J8i"}
+                {hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "CA: 55bE8QkrnTEKou5kB4\nfGBRt9TmKtb9R6z2P5iqa54J8i"
+                  : "CA: 55bE8QkrnTEKou5kB4fGBRt9TmKtb9R6z2P5iqa54J8i"}
               </div>
             </div>
           </section>
